@@ -1,8 +1,8 @@
 /* Estilos globales */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fondo oscuro */
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c 0%, #928DAB 100%); /* Fondo degradado */
     color: #fff; /* Texto blanco */
     display: flex;
     flex-direction: column;
@@ -13,7 +13,6 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px 0;
-    text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -21,23 +20,25 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0 30px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #a855f7; /* Morado brillante */
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-size: 20px;
+    font-weight: 700;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
     color: #fff; /* Cambia a blanco al pasar el ratón */
+    transform: scale(1.1); /* Efecto de ampliación al pasar el ratón */
 }
 
 /* Sección principal */
@@ -47,18 +48,22 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 90vh; /* Ocupa casi toda la pantalla */
-    padding: 20px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Estilo de contenido */
 .content {
     max-width: 600px;
+    z-index: 1; /* Para asegurarse de que el contenido esté encima del fondo */
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 60px;
     color: #fff;
-    font-weight: 900;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra para efecto 3D */
 }
 
 .highlight {
@@ -66,42 +71,35 @@ h1 {
 }
 
 p {
-    font-size: 20px;
+    font-size: 24px;
     margin: 10px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Sombra para mejorar legibilidad */
 }
 
+/* Estilo del botón */
 .btn {
     display: inline-block;
-    background-color: #a855f7;
+    background: linear-gradient(45deg, #a855f7, #7b2cbf); /* Botón degradado */
     color: #fff;
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 30px;
     margin-top: 20px;
-    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #7b2cbf;
+    background: linear-gradient(45deg, #7b2cbf, #a855f7); /* Cambio de color al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación */
 }
 
 /* Contenedor para el GIF (logo animado) */
 .image-container img {
-    max-width: 400px;
+    max-width: 450px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 10px rgba(168, 85, 247, 0.5); /* Sombra morada */
-    animation: glow 1.5s infinite alternate; /* Efecto de brillo */
-}
-
-/* Efecto de brillo animado en el GIF */
-@keyframes glow {
-    from {
-        box-shadow: 0px 0px 20px 10px rgba(168, 85, 247, 0.5);
-    }
-    to {
-        box-shadow: 0px 0px 30px 20px rgba(168, 85, 247, 0.8);
-    }
 }
 
 /* Estilos del pie de página */
@@ -113,4 +111,23 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto 3D */
+h1, p {
+    position: relative;
+    display: inline-block;
+}
+
+h1::after, p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 3px;
+    top: 3px;
+    background: rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+    z-index: -1; /* Asegúrate de que la sombra esté detrás del texto */
+    border-radius: 5px;
+    filter: blur(5px); /* Desenfoque para suavizar la sombra */
 }
