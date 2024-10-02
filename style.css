@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto total */
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -6,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('background.jpg'); /* Asegúrate de que la imagen esté en la carpeta images */
+    background-image: url('images/background.jpg'); /* Asegúrate de que la imagen esté en la carpeta images */
     background-size: cover; /* Cubre toda la pantalla */
     background-position: center; /* Centra la imagen */
 }
@@ -14,7 +18,7 @@ body {
 .container {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
     border-radius: 10px; /* Bordes redondeados */
 }
 
@@ -26,10 +30,12 @@ body {
     cursor: pointer;
     margin: 10px; /* Espacio entre los botones */
     transition: background-color 0.3s, transform 0.3s;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efecto de hover */
+    background-color: #0056b3; /* Efecto de hover */
     transform: scale(1.05); /* Aumento de tamaño al pasar el ratón */
 }
 
