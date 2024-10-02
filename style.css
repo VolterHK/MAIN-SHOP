@@ -6,14 +6,10 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
     height: 100vh; /* Altura total de la ventana */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('images/background.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background: url('images/fondo.jpg') no-repeat center center fixed; /* Cambia esto a tu ruta */
     background-size: cover; /* Cubre toda la pantalla */
+
 }
 
 .container {
