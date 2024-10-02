@@ -1,47 +1,76 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
-.container {
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
     text-align: center;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .title {
     font-size: 3em;
+    margin-bottom: 10px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.buy-button, .learn-button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.buy-button {
+    background: #1abc9c;
+}
+
+.learn-button {
+    background: #3498db;
+}
+
+.buy-button:hover, .learn-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #dcdcdc;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
-}
-
-.join-button {
-    padding: 15px 30px;
-    font-size: 1.5em;
-    color: #fff;
-    background: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.join-button:hover {
-    background: #0056b3;
-    transform: scale(1.1);
 }
