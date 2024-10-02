@@ -15,3 +15,50 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
     border-radius: 10px; /* Bordes redondeados */
 }
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+}
+
+.neon-button {
+    padding: 15px 25px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de texto */
+    color: white; /* Color de texto */
+    background-color: purple; /* Color de fondo del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    position: relative; /* Para efectos de neón */
+    overflow: hidden; /* Para ocultar el brillo que se escapa */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+.neon-button::before {
+    content: ''; /* Generar contenido antes del botón */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2); /* Brillo de fondo */
+    filter: blur(10px); /* Desenfoque */
+    opacity: 0; /* Comienza invisible */
+    transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+.neon-button:hover::before {
+    opacity: 1; /* Muestra el brillo al pasar el ratón */
+}
+
+.language-selector {
+    width: 50px; /* Ancho del selector de idioma */
+    padding: 5px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de texto */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
