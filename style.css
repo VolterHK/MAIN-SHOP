@@ -5,15 +5,32 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh; /* Altura total de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    background: linear-gradient(45deg, #4A90E2, #9013FE); /* Gradiente de fondo */
+    background-size: 400% 400%; /* Aumenta el tamaño del fondo para animar */
+    animation: gradient 15s ease infinite; /* Animación del gradiente */
 }
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
 
 .overlay {
     background: rgba(0, 0, 0, 0.6);
