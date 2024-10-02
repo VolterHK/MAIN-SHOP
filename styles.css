@@ -54,11 +54,16 @@ body {
 }
 
 .language-selector {
-    width: 50px; /* Ancho del selector de idioma */
+    width: auto; /* Dejar que el ancho se ajuste al contenido */
     padding: 5px; /* Espaciado interno */
     font-size: 16px; /* Tamaño de texto */
     border-radius: 5px; /* Bordes redondeados */
     background-color: rgba(255, 255, 255, 0.5); /* Fondo semi-transparente */
     border: none; /* Sin borde */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.language-selector img {
+    width: 20px; /* Ancho de las imágenes de las banderas */
+    height: auto; /* Mantener la proporción */
 }
