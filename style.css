@@ -6,15 +6,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #4A90E2, #9013FE); /* Gradiente de fondo */
-    background-size: 400% 400%; /* Aumenta el tamaño del fondo para animar */
-    animation: gradient 15s ease infinite; /* Animación del gradiente */
-}
-
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background: url('images/background.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
 }
 
 .container {
@@ -22,4 +15,5 @@ body {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
     border-radius: 10px; /* Bordes redondeados */
+    transform: translateZ(0); /* Mejora el rendimiento del parallax */
 }
