@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Shop</title>
-    <link rel="stylesheet" href="styles.css">  <!-- Vincula tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1 id="welcome-message">¡Bienvenido a Main Shop!</h1>
         <p id="description">¡Las mejores herramientas para tu juego!</p>
-        <button id="buy-button">Compra Ahora</button>
-        <button id="learn-button">Aprende Más</button>
         
-        <select id="language-selector">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-        </select>
+        <div class="button-container">
+            <button id="buy-button" class="neon-button">Tienda</button>
+            
+            <select id="language-selector" class="language-selector">
+                <option value="es" data-logo="images/es.png">🇪🇸</option>
+                <option value="en" data-logo="images/en.png">🇬🇧</option>
+            </select>
+            
+            <button id="learn-button" class="neon-button">Soporte</button>
+        </div>
     </div>
 
-    <script src="script.js"></script> <!-- Vincula tu archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
