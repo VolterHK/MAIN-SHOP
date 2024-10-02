@@ -1,22 +1,21 @@
 body {
-    background-image: url('images/background.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh; /* Altura total de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+    background-image: url('background.jpg'); /* Asegúrate de que la imagen esté en la carpeta images */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
 }
 
 .container {
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el contenedor */
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .btn {
@@ -30,17 +29,17 @@ body {
 }
 
 .btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto de hover */
+    transform: scale(1.05); /* Aumento de tamaño al pasar el ratón */
 }
 
 h1, h2 {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra de texto */
 }
 
 footer {
     position: absolute;
-    bottom: 20px;
+    bottom: 20px; /* Posición en la parte inferior */
     left: 50%;
     transform: translateX(-50%);
     color: white;
