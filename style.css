@@ -1,53 +1,76 @@
 * {
-    box-sizing: border-box; /* Incluye el padding y border en el ancho y alto total */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    height: 100vh; /* Altura total de la ventana */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('images/background.jpg'); /* Asegúrate de que la imagen esté en la carpeta images */
-    background-size: cover; /* Cubre toda la pantalla */
-    background-position: center; /* Centra la imagen */
+    min-height: 100vh;
+    overflow: hidden;
 }
 
-.container {
-    text-align: center;
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.btn {
+.title {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.buy-button, .learn-button {
     padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 5px;
+    font-size: 1.2em;
     border: none;
+    border-radius: 5px;
+    margin: 10px;
     cursor: pointer;
-    margin: 10px; /* Espacio entre los botones */
-    transition: background-color 0.3s, transform 0.3s;
-    background-color: #007bff; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover {
-    background-color: #0056b3; /* Efecto de hover */
-    transform: scale(1.05); /* Aumento de tamaño al pasar el ratón */
+.buy-button {
+    background: #1abc9c;
 }
 
-h1, h2 {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra de texto */
+.learn-button {
+    background: #3498db;
+}
+
+.buy-button:hover, .learn-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 footer {
-    position: absolute;
-    bottom: 20px; /* Posición en la parte inferior */
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #dcdcdc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
