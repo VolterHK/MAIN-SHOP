@@ -5,14 +5,24 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 100vh; /* Altura total de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    background: url('images/background.jpg') no-repeat center center fixed; /* Imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    transform: translateZ(0); /* Mejora el rendimiento del parallax */
+
 }
 
 .overlay {
