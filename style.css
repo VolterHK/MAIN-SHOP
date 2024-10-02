@@ -1,76 +1,48 @@
-* {
+body {
+    background-image: url('images/tu-imagen.jpg'); /* Cambia 'tu-imagen.jpg' por el nombre de tu archivo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 15px;
+.container {
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el contenedor */
+    border-radius: 10px;
 }
 
-.title {
-    font-size: 3em;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 1s ease-in-out;
-}
-
-.subtitle {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-.buy-button, .learn-button {
+.btn {
     padding: 15px 25px;
-    font-size: 1.2em;
-    border: none;
+    font-size: 18px;
     border-radius: 5px;
-    margin: 10px;
+    border: none;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    margin: 10px; /* Espacio entre los botones */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.buy-button {
-    background: #1abc9c;
-}
-
-.learn-button {
-    background: #3498db;
-}
-
-.buy-button:hover, .learn-button:hover {
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1, h2 {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 footer {
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #dcdcdc;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
 }
