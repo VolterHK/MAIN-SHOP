@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    height: 100vh; /* Altura total de la ventana */
+    background: url('images/fondo.jpg') no-repeat center center fixed; /* Cambia esto a tu ruta */
+    background-size: cover; /* Cubre toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Color de texto */
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+}
